@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/12.0.21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eduardososa.databaseprojecteleven.controllers.UserController">
+   <left>
+      <AnchorPane prefHeight="637.0" prefWidth="274.0" style="-fx-background-color: #016635;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="86.0" layoutY="25.0" prefHeight="31.0" prefWidth="95.0" text="Hello" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="userNameLabel" alignment="CENTER" layoutX="18.0" layoutY="62.0" prefHeight="31.0" prefWidth="234.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="homeButton" layoutX="24.0" layoutY="167.0" mnemonicParsing="false" onAction="#homeButtonOnAction" prefHeight="63.0" prefWidth="222.0" style="-fx-background-color: #FFFFFF;" text="Home">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="userEditorButton" layoutX="24.0" layoutY="248.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="222.0" style="-fx-background-color: #FFD140;" text="User Editor">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="settingsButton" layoutX="24.0" layoutY="329.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="222.0" style="-fx-background-color: #FFFFFF;" text="Settings" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="83.0" prefWidth="1280.0" style="-fx-background-color: #018445;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="exitButton" layoutX="1116.0" layoutY="12.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="59.0" prefWidth="130.0" style="-fx-background-color: #FFFFFF;" text="Exit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="logOutButtone" layoutX="965.0" layoutY="12.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" prefHeight="59.0" prefWidth="130.0" style="-fx-background-color: #FFFFFF;" text="Log Out">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="25.0" layoutY="6.0" prefHeight="70.0" prefWidth="153.0" text="INTER" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="180.0" layoutY="24.0" prefHeight="35.0" prefWidth="253.0" text="Database System" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Circle fill="#ffd140" layoutX="40.0" layoutY="16.0" radius="4.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+   </top>
+   <right>
+      <AnchorPane prefHeight="637.0" prefWidth="1022.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="userTable" layoutX="16.0" layoutY="253.0" prefHeight="370.0" prefWidth="974.0">
+              <columns>
+                <TableColumn fx:id="userIDCol" prefWidth="162.0" text="User ID" />
+                <TableColumn fx:id="userPasswordCol" prefWidth="162.0" text="Password" />
+                  <TableColumn fx:id="userEmailCol" prefWidth="162.0" text="Email" />
+                  <TableColumn fx:id="userFirstNameCol" prefWidth="162.0" text="First Name" />
+                  <TableColumn fx:id="userLastNameCol" prefWidth="162.0" text="Last Name" />
+                  <TableColumn fx:id="userAccountTypeCol" prefWidth="162.0" text="Account" />
+              </columns>
+            </TableView>
+            <Button fx:id="newUserButton" layoutX="851.0" layoutY="66.0" mnemonicParsing="false" onAction="#newUserOnAction" prefHeight="34.0" prefWidth="120.0" text="New">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="updateUserButton" layoutX="851.0" layoutY="126.0" mnemonicParsing="false" onAction="#updateUserOnAction" prefHeight="34.0" prefWidth="120.0" text="Update">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteUserButton" layoutX="851.0" layoutY="186.0" mnemonicParsing="false" onAction="#deleteUserOnAction" prefHeight="34.0" prefWidth="120.0" text="Delete">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <TextField fx:id="userIdTextField" editable="false" layoutX="225.0" layoutY="103.0" promptText="User ID" style="-fx-background-color: #E9E9E9;" />
+            <Label layoutX="130.0" layoutY="107.0" prefHeight="17.0" prefWidth="95.0" text="User ID" />
+            <TextField fx:id="userPasswordTextField" layoutX="225.0" layoutY="141.0" promptText="Password" />
+            <Label layoutX="130.0" layoutY="145.0" prefHeight="17.0" prefWidth="95.0" text="Password" />
+            <TextField fx:id="userEmailTextField" layoutX="225.0" layoutY="175.0" promptText="Email" />
+            <Label layoutX="130.0" layoutY="179.0" prefHeight="17.0" prefWidth="95.0" text="Email" />
+            <TextField fx:id="userFirstNameTextField" layoutX="494.0" layoutY="103.0" promptText="First Name" />
+            <Label layoutX="399.0" layoutY="107.0" prefHeight="17.0" prefWidth="95.0" text="First Name" />
+            <TextField fx:id="userLastNameTextField" layoutX="494.0" layoutY="141.0" promptText="Last Name" />
+            <Label layoutX="399.0" layoutY="145.0" prefHeight="17.0" prefWidth="95.0" text="Last Name" />
+            <TextField fx:id="userAccountTextField" layoutX="494.0" layoutY="175.0" promptText="Account" />
+            <Label layoutX="399.0" layoutY="179.0" prefHeight="17.0" prefWidth="95.0" text="Account" />
+            <Button fx:id="resetUserButton" layoutX="598.0" layoutY="212.0" mnemonicParsing="false" onAction="#userResetOnAction" text="Reset" />
+            <Button fx:id="refreshUserButton" layoutX="531.0" layoutY="212.0" mnemonicParsing="false" onAction="#userRefreshButtonOnAction" prefHeight="25.0" prefWidth="58.0" text="Refresh" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

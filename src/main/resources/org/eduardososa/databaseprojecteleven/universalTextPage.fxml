@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/12.0.21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eduardososa.databaseprojecteleven.controllers.TextareaController">
+   <children>
+      <TextArea fx:id="universalTextArea" layoutX="35.0" layoutY="129.0" prefHeight="200.0" prefWidth="332.0" wrapText="true" />
+      <Label fx:id="universalTextAreaLabel" alignment="CENTER" layoutX="63.0" layoutY="38.0" prefHeight="63.0" prefWidth="276.0" textAlignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="textAreaSubmitButton" layoutX="158.0" layoutY="342.0" mnemonicParsing="false" onAction="#submitButtonOnAction" prefHeight="44.0" prefWidth="98.0" text="Submit" />
+      <Button fx:id="textAreaCancelButton" layoutX="263.0" layoutY="342.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="44.0" prefWidth="98.0" text="Cancel" />
+   </children>
+</AnchorPane>

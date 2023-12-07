@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/12.0.21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eduardososa.databaseprojecteleven.controllers.LoginController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="247.0" style="-fx-background-color: #018445;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="51.0" layoutY="100.0" prefHeight="74.0" prefWidth="145.0" text="INTER" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="50.0" />
+               </font>
+            </Label>
+            <Circle fill="#ffd140" layoutX="58.0" layoutY="107.0" radius="7.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+            <Label layoutX="33.0" layoutY="174.0" text="Database System" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="395.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="123.0" layoutY="62.0" text="Secure Login">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="76.0" layoutY="112.0" text="Email">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="51.0" layoutY="158.0" text="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailTextField" accessibleRole="IMAGE_VIEW" layoutX="125.0" layoutY="109.0" prefHeight="26.0" prefWidth="178.0" promptText="Email" style="-fx-background-color: #FFFFFF;" />
+            <PasswordField fx:id="passwordTextField" layoutX="125.0" layoutY="155.0" onKeyPressed="#passwordEnterOnAction" prefHeight="26.0" prefWidth="178.0" promptText="Password" style="-fx-background-color: #FFFFFF;" />
+            <Button fx:id="loginButton" layoutX="42.0" layoutY="229.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="51.0" prefWidth="267.0" style="-fx-background-color: #018445;" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="42.0" layoutY="301.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="51.0" prefWidth="267.0" style="-fx-background-color: #018445;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Label fx:id="loginMessageLabel" layoutX="125.0" layoutY="192.0" textAlignment="CENTER" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

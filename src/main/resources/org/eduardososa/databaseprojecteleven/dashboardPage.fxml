@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/12.0.21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.eduardososa.databaseprojecteleven.controllers.DashboardController">
+   <left>
+      <AnchorPane prefHeight="637.0" prefWidth="274.0" style="-fx-background-color: #016635;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="86.0" layoutY="25.0" prefHeight="31.0" prefWidth="95.0" text="Hello" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="userNameLabel" alignment="CENTER" layoutX="18.0" layoutY="62.0" prefHeight="31.0" prefWidth="234.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="homeButton" layoutX="24.0" layoutY="167.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="222.0" style="-fx-background-color: #FFD140;" text="Home">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="userEditorButton" layoutX="24.0" layoutY="248.0" mnemonicParsing="false" onAction="#userEditorButtonOnAction" prefHeight="63.0" prefWidth="222.0" style="-fx-background-color: #FFFFFF;" text="User Editor">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="settingsButton" layoutX="24.0" layoutY="329.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="222.0" style="-fx-background-color: #FFFFFF;" text="Settings" visible="false">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="83.0" prefWidth="1280.0" style="-fx-background-color: #018445;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="exitButton" layoutX="1116.0" layoutY="12.0" mnemonicParsing="false" onAction="#exitButtonOnAction" prefHeight="59.0" prefWidth="130.0" style="-fx-background-color: #FFFFFF;" text="Exit">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="logOutButtone" layoutX="965.0" layoutY="12.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" prefHeight="59.0" prefWidth="130.0" style="-fx-background-color: #FFFFFF;" text="Log Out">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="25.0" layoutY="6.0" prefHeight="70.0" prefWidth="153.0" text="INTER" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="180.0" layoutY="24.0" prefHeight="35.0" prefWidth="253.0" text="Database System" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Circle fill="#ffd140" layoutX="40.0" layoutY="16.0" radius="4.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+   </top>
+   <right>
+      <AnchorPane prefHeight="637.0" prefWidth="1022.0" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane layoutX="11.0" layoutY="9.0" prefHeight="618.0" prefWidth="996.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Program Editor">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutY="-1.0" prefHeight="592.0" prefWidth="287.0">
+                                 <children>
+                                    <TextField fx:id="programNameTextField" layoutX="118.0" layoutY="161.0" promptText="Program Name" />
+                                    <Label layoutX="21.0" layoutY="165.0" prefHeight="17.0" prefWidth="97.0" text="Program Name" />
+                                    <Button fx:id="newProgramButton" layoutX="47.0" layoutY="296.0" mnemonicParsing="false" onAction="#newProgramButtonOnClick" prefHeight="62.0" prefWidth="193.0" text="New">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="updateProgramButton" layoutX="47.0" layoutY="367.0" mnemonicParsing="false" onAction="#updateProgramButtonOnClick" prefHeight="62.0" prefWidth="193.0" text="Update">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="deleteProgramButton" layoutX="47.0" layoutY="438.0" mnemonicParsing="false" onAction="#deleteProgramButtonOnAction" prefHeight="62.0" prefWidth="193.0" text="Delete">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="programIDTextField" editable="false" layoutX="118.0" layoutY="129.0" promptText="Program ID" style="-fx-background-color: #E9E9E9;" />
+                                    <Label layoutX="21.0" layoutY="133.0" prefHeight="17.0" prefWidth="97.0" text="Program ID" />
+                                    <Button fx:id="resetProgramTextButton" layoutX="218.0" layoutY="193.0" mnemonicParsing="false" onAction="#resetProgramTextButtonOnClick" text="Reset" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="288.0" layoutY="-1.0" prefHeight="592.0" prefWidth="775.0">
+                                 <children>
+                                    <TableView fx:id="programTable" layoutX="14.0" layoutY="59.0" prefHeight="519.0" prefWidth="680.0">
+                                      <columns>
+                                        <TableColumn fx:id="programIdCol" prefWidth="340.0" text="Program ID" />
+                                        <TableColumn fx:id="programNameCol" prefWidth="340.0" text="Program Name" />
+                                      </columns>
+                                    </TableView>
+                                    <Button fx:id="refreshProgramButton" layoutX="620.0" layoutY="14.0" mnemonicParsing="false" onAction="#refreshProgramButtonOnAction" prefHeight="39.0" prefWidth="65.0" text="Refresh" />
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Course Editor">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="592.0" prefWidth="287.0">
+                                 <children>
+                                    <Button fx:id="newCourseButton" layoutX="47.0" layoutY="296.0" mnemonicParsing="false" onAction="#newCourseButtonOnClick" prefHeight="62.0" prefWidth="193.0" text="New">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="updateCourseButton" layoutX="47.0" layoutY="367.0" mnemonicParsing="false" onAction="#updateCourseButtonOnClick" prefHeight="62.0" prefWidth="193.0" text="Update">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="deleteCourseButton" layoutX="47.0" layoutY="438.0" mnemonicParsing="false" onAction="#deleteCourseButtonOnAction" prefHeight="62.0" prefWidth="193.0" text="Delete">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="resetCourseTextButton" layoutX="218.0" layoutY="244.0" mnemonicParsing="false" onAction="#resetCourseTextButtonOnClick" text="Reset" />
+                                    <TextField fx:id="courseIdTextBox" layoutX="118.0" layoutY="26.0" promptText="Course ID" />
+                                    <Label layoutX="21.0" layoutY="30.0" prefHeight="17.0" prefWidth="97.0" text="Course ID" />
+                                    <Label layoutX="21.0" layoutY="62.0" prefHeight="17.0" prefWidth="97.0" text="Competency ID" />
+                                    <Label layoutX="21.0" layoutY="93.0" prefHeight="17.0" prefWidth="97.0" text="Professor ID" />
+                                    <TextField fx:id="courseNameTextBox" layoutX="118.0" layoutY="121.0" promptText="Course Name" />
+                                    <Label layoutX="21.0" layoutY="125.0" prefHeight="17.0" prefWidth="97.0" text="Course Name" />
+                                    <TextField fx:id="courseObjectiveTextBox" layoutX="118.0" layoutY="150.0" prefHeight="25.0" prefWidth="90.0" promptText="Objective Desc." />
+                                    <Label layoutX="21.0" layoutY="154.0" prefHeight="17.0" prefWidth="97.0" text="Objective Desc." />
+                                    <TextField fx:id="courseEvalTextBox" layoutX="118.0" layoutY="181.0" prefHeight="25.0" prefWidth="90.0" promptText="Eval. Instrument" />
+                                    <Label layoutX="21.0" layoutY="185.0" prefHeight="17.0" prefWidth="97.0" text="Eval. Instrument" />
+                                    <TextField fx:id="courseCompTextBox" layoutX="118.0" layoutY="213.0" prefWidth="90.0" promptText="Comp. Metric" />
+                                    <Label layoutX="21.0" layoutY="217.0" prefHeight="17.0" prefWidth="97.0" text="Comp. Metric" />
+                                    <ComboBox fx:id="courseCompetencyIdComboBox" layoutX="118.0" layoutY="58.0" prefHeight="26.0" prefWidth="159.0" promptText="Competency ID" />
+                                    <ComboBox fx:id="courseProfessorIdComboBox" layoutX="118.0" layoutY="89.0" prefHeight="26.0" prefWidth="159.0" promptText="Professor ID" />
+                                    <Button fx:id="objectiveDescMoreButton" layoutX="218.0" layoutY="150.0" mnemonicParsing="false" onAction="#objectiveDescMoreOnAction" text="More" />
+                                    <Button fx:id="evalInstrumentMoreButton" layoutX="218.0" layoutY="181.0" mnemonicParsing="false" onAction="#evalInstrumentMoreOnAction" text="More" />
+                                    <Button fx:id="compMetricMoreButton" layoutX="218.0" layoutY="213.0" mnemonicParsing="false" onAction="#compMetricMoreOnAction" text="More" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="287.0" layoutY="-1.0" prefHeight="592.0" prefWidth="775.0">
+                                 <children>
+                                    <TableView fx:id="courseTable" layoutX="14.0" layoutY="59.0" prefHeight="519.0" prefWidth="680.0">
+                                       <columns>
+                                          <TableColumn fx:id="courseIdCol" maxWidth="1000.0" minWidth="5.0" prefWidth="97.0" text="Course ID" />
+                                          <TableColumn fx:id="courseCompetencyIdCol" maxWidth="1000.0" minWidth="5.0" prefWidth="97.0" text="Competency ID" />
+                                          <TableColumn fx:id="courseProfessorIdCol" maxWidth="1000.0" minWidth="5.0" prefWidth="97.0" text="Professor ID" />
+                                          <TableColumn fx:id="courseNameCol" maxWidth="1000.0" minWidth="5.0" prefWidth="97.0" text="Course Name" />
+                                          <TableColumn fx:id="objectiveDescCol" maxWidth="1000.0" minWidth="5.0" prefWidth="97.0" text="Objective Desc." />
+                                          <TableColumn fx:id="evalInsCol" maxWidth="1000.0" minWidth="5.0" prefWidth="97.0" text="Eval. Instrument" />
+                                          <TableColumn fx:id="compMetricCol" maxWidth="1000.0" minWidth="5.0" prefWidth="97.0" text="Comp. Metric" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="refreshCourseButton" layoutX="620.0" layoutY="14.0" mnemonicParsing="false" onAction="#refreshCourseButtonOnAction" prefHeight="39.0" prefWidth="65.0" text="Refresh" />
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="Professor Editor">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane prefHeight="592.0" prefWidth="287.0">
+                                 <children>
+                                    <Button fx:id="newProfButton" layoutX="47.0" layoutY="296.0" mnemonicParsing="false" onAction="#newProfButtonOnClick" prefHeight="62.0" prefWidth="193.0" text="New">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="updateProfButton" layoutX="47.0" layoutY="367.0" mnemonicParsing="false" onAction="#updateProfButtonOnClick" prefHeight="62.0" prefWidth="193.0" text="Update">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="deleteProfButton" layoutX="47.0" layoutY="438.0" mnemonicParsing="false" onAction="#deleteProfButtonOnAction" prefHeight="62.0" prefWidth="193.0" text="Delete">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="resetProfTextButton" layoutX="218.0" layoutY="244.0" mnemonicParsing="false" onAction="#resetProfTextButtonOnClick" text="Reset" />
+                                    <TextField fx:id="profIdTextBox" layoutX="118.0" layoutY="78.0" promptText="Professor ID" />
+                                    <Label layoutX="21.0" layoutY="82.0" prefHeight="17.0" prefWidth="97.0" text="Professor ID" />
+                                    <TextField fx:id="profFirstNameTextBox" layoutX="118.0" layoutY="111.0" promptText="First Name" />
+                                    <Label layoutX="21.0" layoutY="115.0" prefHeight="17.0" prefWidth="97.0" text="First Name" />
+                                    <TextField fx:id="profLastNameTextBox" layoutX="118.0" layoutY="145.0" promptText="Last Name" />
+                                    <Label layoutX="21.0" layoutY="149.0" prefHeight="17.0" prefWidth="97.0" text="Last Name" />
+                                    <TextField fx:id="profEmailTextBox" layoutX="118.0" layoutY="176.0" promptText="Email" />
+                                    <Label layoutX="21.0" layoutY="180.0" prefHeight="17.0" prefWidth="97.0" text="Email" />
+                                    <TextField fx:id="profPhoneTextBox" layoutX="118.0" layoutY="209.0" promptText="Phone Number" />
+                                    <Label layoutX="21.0" layoutY="213.0" prefHeight="17.0" prefWidth="97.0" text="Phone Number" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="287.0" layoutY="-1.0" prefHeight="592.0" prefWidth="775.0">
+                                 <children>
+                                    <TableView fx:id="professorTable" layoutX="14.0" layoutY="59.0" prefHeight="519.0" prefWidth="680.0">
+                                       <columns>
+                                          <TableColumn fx:id="professorIdCol" maxWidth="1000.0" minWidth="5.0" prefWidth="136.0" text="Professor ID" />
+                                          <TableColumn fx:id="profFirstNameCol" maxWidth="1000.0" minWidth="5.0" prefWidth="136.0" text="First Name" />
+                                          <TableColumn fx:id="profLastNameCol" maxWidth="1000.0" minWidth="5.0" prefWidth="136.0" text="Last Name" />
+                                          <TableColumn fx:id="profEmailCol" maxWidth="1000.0" minWidth="5.0" prefWidth="136.0" text="Email" />
+                                          <TableColumn fx:id="profPhoneCol" maxWidth="1000.0" minWidth="5.0" prefWidth="136.0" text="Phone Number" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="refreshProfButton" layoutX="620.0" layoutY="14.0" mnemonicParsing="false" onAction="#refreshProfButtonOnAction" prefHeight="39.0" prefWidth="65.0" text="Refresh" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Competency Editor">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutY="-1.0" prefHeight="592.0" prefWidth="287.0">
+                                 <children>
+                                    <TextField fx:id="compDescTextField" layoutX="118.0" layoutY="161.0" prefWidth="90.0" promptText="Competency Desc." />
+                                    <Label layoutX="21.0" layoutY="165.0" prefHeight="17.0" prefWidth="97.0" text="Description" />
+                                    <Button fx:id="newCompButton" layoutX="47.0" layoutY="296.0" mnemonicParsing="false" onAction="#newCompButtonOnClick" prefHeight="62.0" prefWidth="193.0" text="New">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="updateCompButton" layoutX="47.0" layoutY="367.0" mnemonicParsing="false" onAction="#updateCompButtonOnClick" prefHeight="62.0" prefWidth="193.0" text="Update">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="deleteCompButton" layoutX="47.0" layoutY="438.0" mnemonicParsing="false" onAction="#deleteCompButtonOnAction" prefHeight="62.0" prefWidth="193.0" text="Delete">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="competencyIDTextField" editable="false" layoutX="118.0" layoutY="129.0" promptText="Competency ID" style="-fx-background-color: #E9E9E9;" />
+                                    <Label layoutX="21.0" layoutY="133.0" prefHeight="17.0" prefWidth="97.0" text="Competency ID" />
+                                    <Button fx:id="resetCompTextButton" layoutX="218.0" layoutY="193.0" mnemonicParsing="false" onAction="#resetCompTextButtonOnClick" text="Reset" />
+                                    <Button fx:id="compDescMoreButton" layoutX="219.0" layoutY="161.0" mnemonicParsing="false" onAction="#compDescMoreOnAction" text="More" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="288.0" layoutY="-1.0" prefHeight="592.0" prefWidth="775.0">
+                                 <children>
+                                    <TableView fx:id="competencyTable" layoutX="14.0" layoutY="59.0" prefHeight="519.0" prefWidth="680.0">
+                                       <columns>
+                                          <TableColumn fx:id="competencyIdCol" prefWidth="340.0" text="Competency ID" />
+                                          <TableColumn fx:id="competencyDescCol" prefWidth="340.0" text="Competency Description" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="refreshCompButton" layoutX="620.0" layoutY="14.0" mnemonicParsing="false" onAction="#refreshCompButtonOnAction" prefHeight="39.0" prefWidth="65.0" text="Refresh" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Course Allocate">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutY="-1.0" prefHeight="592.0" prefWidth="287.0">
+                                 <children>
+                                    <TextField fx:id="courseSelectionTextField" editable="false" layoutX="118.0" layoutY="161.0" promptText="Course" style="-fx-background-color: #E9E9E9;" />
+                                    <Label layoutX="21.0" layoutY="165.0" prefHeight="17.0" prefWidth="97.0" text="Course" />
+                                    <Button fx:id="newSelectionButton" layoutX="47.0" layoutY="296.0" mnemonicParsing="false" onAction="#newSelectionButtonOnClick" prefHeight="62.0" prefWidth="193.0" text="New">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="deleteSelectionButton" layoutX="47.0" layoutY="438.0" mnemonicParsing="false" onAction="#deleteSelectionButtonOnAction" prefHeight="62.0" prefWidth="193.0" text="Delete">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="programSelectionTextField" editable="false" layoutX="118.0" layoutY="129.0" promptText="Program" style="-fx-background-color: #E9E9E9;" />
+                                    <Label layoutX="21.0" layoutY="133.0" prefHeight="17.0" prefWidth="97.0" text="Program" />
+                                    <Button fx:id="resetSelectionTextButton" layoutX="218.0" layoutY="193.0" mnemonicParsing="false" onAction="#resetSelectionTextButtonOnClick" text="Reset" />
+                                    <Button fx:id="updateSelectionButton" layoutX="47.0" layoutY="367.0" mnemonicParsing="false" onAction="#updateSelectionButtonOnClick" prefHeight="62.0" prefWidth="193.0" text="Update">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                    </Button>
+                                    <TextField fx:id="selectionIDTextField" editable="false" layoutX="118.0" layoutY="97.0" promptText="Selection ID" style="-fx-background-color: #E9E9E9;" />
+                                    <Label layoutX="21.0" layoutY="101.0" prefHeight="17.0" prefWidth="97.0" text="Selection ID" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="288.0" layoutY="-1.0" prefHeight="592.0" prefWidth="775.0">
+                                 <children>
+                                    <TableView fx:id="programSelectionTable" layoutX="15.0" layoutY="98.0" prefHeight="240.0" prefWidth="340.0">
+                                       <columns>
+                                          <TableColumn fx:id="programSelCol" prefWidth="340.0" text="Program" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="refreshSelectionButton" layoutX="620.0" layoutY="14.0" mnemonicParsing="false" onAction="#refreshSelectionButtonOnAction" prefHeight="39.0" prefWidth="65.0" text="Refresh" />
+                                    <TableView fx:id="courseSelectionTable" layoutX="361.0" layoutY="98.0" prefHeight="240.0" prefWidth="340.0">
+                                       <columns>
+                                          <TableColumn fx:id="courseSelCol" prefWidth="340.0" text="Course" />
+                                       </columns>
+                                    </TableView>
+                                    <TextField fx:id="programSelSearchBox" layoutX="110.0" layoutY="66.0" promptText="Search Program" visible="false" />
+                                    <TextField fx:id="courseSelSearchBox" layoutX="456.0" layoutY="66.0" promptText="Search Course" visible="false" />
+                                    <TableView fx:id="programcourseTable" layoutX="15.0" layoutY="348.0" prefHeight="220.0" prefWidth="685.0">
+                                      <columns>
+                                          <TableColumn fx:id="programcourseSelIdCol" prefWidth="228.0" text="Selection ID" />
+                                        <TableColumn fx:id="programcourseProgNameCol" prefWidth="228.0" text="Program Name" />
+                                        <TableColumn fx:id="programcourseCourseIdCol" prefWidth="228.0" text="Course ID" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children></AnchorPane>
+   </right>
+</BorderPane>
